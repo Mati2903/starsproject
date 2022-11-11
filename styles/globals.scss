@@ -1,0 +1,179 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "Lato", Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+		Helvetica Neue, sans-serif;
+	min-height: 200vh;
+	background: #0f2027; //for browsers with no support for gradient bgc
+	background: -webkit-linear-gradient(to bottom, #0f2027, #265364);
+	background: linear-gradient(to bottom, #0f2027, #265364);
+	color: #fff;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+//---------------- main section ---------------------
+.main {
+	height: 100vh;
+	//main title
+	h1 {
+		position: absolute;
+		margin: 0;
+		top: 30%;
+		left: 50%;
+		width: 80%;
+		transform: translate(-50%, -50%);
+		pointer-events: none;
+		font-size: 5rem;
+		font-family: "Dancing Script", cursive;
+		font-weight: 700;
+		text-align: center;
+	}
+	.details {
+		position: absolute;
+		top: 65%;
+		left: 50%;
+		width: 80%;
+		transform: translateX(-50%);
+		text-align: center;
+		// "scroll down to check for details" text
+		&__text {
+			font-size: 2rem;
+			font-family: "Lato";
+			font-style: italic;
+			margin-bottom: 1rem;
+			pointer-events: none;
+		}
+		&__arrow-down {
+			font-size: 3rem;
+			animation: arrowMove 3s linear infinite;
+			@keyframes arrowMove {
+				0% {
+					transform: translateY(0);
+				}
+				50% {
+					transform: translateY(20px);
+				}
+				100% {
+					transform: translateY(0);
+				}
+			}
+		}
+	}
+}
+
+//--------------- more section -------------------
+.more {
+	min-height: 100vh;
+	padding-top: 3rem;
+	padding-bottom: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	gap: 3rem;
+	.card {
+		box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.4);
+		border-radius: 20px;
+		width: 290px;
+		height: 400px;
+		padding: 1.5rem;
+		font-family: "Dancing Script", cursive;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 2rem;
+		//frozen glass effect
+		background-color: rgba(255, 255, 255, 0.2);
+		backdrop-filter: blur(3px);
+
+		&__title {
+			font-size: 3.5rem;
+			margin: 0;
+		}
+		&__icon-bulb {
+			font-size: 4rem;
+		}
+		&__icon-stars {
+			position: absolute;
+			&.starOne {
+				left: 65%;
+				top: 40%;
+				font-size: 0.7rem;
+				transform: rotate(0deg);
+				animation: starsAnim 2s linear infinite alternate;
+			}
+			&.starTwo {
+				top: 30%;
+				left: 35%;
+				font-size: 1rem;
+				transform: rotate(10deg);
+				animation: starsAnim 1s linear infinite alternate;
+			}
+			&.starThree {
+				top: 25%;
+				left: 55%;
+				font-size: 1.33rem;
+				transform: rotate(-10deg);
+				animation: starsAnim 1.5s linear infinite alternate;
+			}
+			&.starFour {
+				top: 40%;
+				left: 28%;
+				font-size: 1.66rem;
+				transform: rotate(20deg);
+				animation: starsAnim 2.5s linear infinite alternate;
+			}
+			&.starFive {
+				top: 50%;
+				left: 60%;
+				font-size: 2rem;
+				transform: rotate(50deg);
+				animation: starsAnim 1.2s linear infinite alternate;
+			}
+		}
+		&__paragraph {
+			font-size: 2.2rem;
+		}
+	}
+	.footer {
+		flex-basis: 100%;
+		align-self: flex-end;
+		text-align: center;
+		opacity: 0.4;
+	}
+}
+
+//----- stars in cards around the bulb animation
+@keyframes starsAnim {
+	from {
+		scale: 1;
+		opacity: 1;
+	}
+	to {
+		scale: 0.7;
+		opacity: 0.7;
+	}
+}
+
+//------------ tablets & desktop -------------------
+@media screen and (min-width: 650px) {
+	.main {
+		h1 {
+			top: 45%;
+			font-size: 7rem;
+		}
+		.details {
+			top: 75%;
+		}
+	}
+}
