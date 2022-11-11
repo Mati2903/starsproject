@@ -82,23 +82,23 @@ const options = {
 	interactivity: {
 		detect_on: "window",
 		events: {
-			onhover: {
+			onHover: {
 				enable: true,
 				mode: "bubble",
 			},
-			onclick: {
+			onClick: {
 				enable: true,
 				mode: "repulse",
 			},
 			resize: true,
 		},
 		modes: {
-			grab: {
-				distance: 150,
-				line_linked: {
-					opacity: 0.3,
-				},
-			},
+			// grab: {
+			// 	distance: 150,
+			// 	line_linked: {
+			// 		opacity: 0.3,
+			// 	},
+			// },
 			bubble: {
 				distance: 75,
 				size: 8,
@@ -110,12 +110,12 @@ const options = {
 				distance: 100,
 				duration: 1,
 			},
-			push: {
-				particles_nb: 1,
-			},
-			remove: {
-				particles_nb: 2,
-			},
+			// push: {
+			// 	particles_nb: 1,
+			// },
+			// remove: {
+			// 	particles_nb: 2,
+			// },
 		},
 	},
 	retina_detect: true,
