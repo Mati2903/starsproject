@@ -9,7 +9,7 @@ export default function Home() {
 			<Head>
 				<title>Your way to the Stars &#9734;</title>
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
-				<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
 				<link
 					href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lato:ital@0;1&display=swap"
 					rel="stylesheet"
